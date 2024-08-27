@@ -51,7 +51,19 @@ const getBlog = async (req, res) => {
           message: "Provided Blog ID is Invalid",
         });
       }
-      const blog = await Blog.findById(id);
+      const blog = await Blog.findById(id).populate([
+        {
+          path: "user",
+          select: "fullname username profile",
+        },
+        {
+          path: "votedBy",
+          select: "fullname username profile",
+        },
+        {
+          path: "comments",
+        },
+      ]);
       if (!blog) {
         return res.status(404).json({
           status: "failed",
@@ -91,16 +103,21 @@ const getBlog = async (req, res) => {
       limit: parseInt(limit, 10) || 10, // Default to 10 items per page
     }; // pagination
     // console.log(options);
-    const blogs = await Blog.find()
-      .select({
-        votedBy: 0,
-        comments: 0,
-      })
-      .populate({
-        path: "user",
-        select: "fullname username profile",
-      })
-      .paginate({}, options, () => {});
+
+    // const blogs = await Blog.find().paginate({}, options, () => {});
+
+    const blogs = await Blog.paginate(
+      {},
+      {
+        select: "-votedBy -comments", // Exclude these fields
+        populate: {
+          path: "user",
+          select: "fullname username profile", // Fields to include from the user
+        },
+        ...options, // Pagination options
+      }
+    );
+
     return res.status(200).json({
       status: "success",
       message: "Blogs are fetched successfully",
