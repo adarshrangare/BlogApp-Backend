@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "Blog Application ",
+    "description": "Blog Application API for CRUD on Blog with Users Features",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -21,7 +21,7 @@
       "description": "Operations related to comments on blogs"
     }
   ],
-  "schemes": ["http"],
+  "schemes": ["http","https"],
   "paths": {
     "/signup": {
       "post": {

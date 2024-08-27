@@ -34,6 +34,6 @@ app.use("/api/v1/blogs", blogRouter);
 app.use("/api/v1/comments", commentRouter);
 
 // Swagger documentation route
-app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 module.exports = app;
