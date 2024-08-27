@@ -19,7 +19,6 @@ const createUser = async (req, res) => {
 
   try {
     const userExist = await User.findOne({ email: email });
-
     if (userExist) {
       return res
         .status(409)
