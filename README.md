@@ -1,5 +1,4 @@
 # BlogApp-Backend
-=====================
 
 ## Overview
 -----------
