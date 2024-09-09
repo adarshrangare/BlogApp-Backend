@@ -75,9 +75,5 @@ BlogApp-Backend is a RESTful API backend for a blogging application. It provides
 ## Contributing
 --------------
 
-Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! Please fork the repository, submit your issues, make your changes, and submit a pull request.
 
-## License
--------
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
