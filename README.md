@@ -4,8 +4,7 @@
 
 BlogApp-Backend is a RESTful API backend for a blogging application. It provides a scalable and secure platform for managing blog posts, comments, and user interactions.
 
-Swagger Documentation: (https://blogapp-backend-5knb.onrender.com/)[https://blogapp-backend-5knb.onrender.com/]
-
+Swagger Documentation: https://blogapp-backend-5knb.onrender.com
 To Use API: `BASE_URL/api/v1`
 
 BASE_URL 1: (https://blogapp-backend-5knb.onrender.com/)[https://blogapp-backend-5knb.onrender.com/]
