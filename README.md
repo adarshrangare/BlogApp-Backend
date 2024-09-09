@@ -39,9 +39,14 @@ BlogApp-Backend is a RESTful API backend for a blogging application. It provides
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/BlogApp-Backend.git`
+1. Clone the repository: `git clone https://github.com/adarshrangare/BlogApp-Backend.git`
 2. Install dependencies: `npm install`
 3. Create a `.env` file with database credentials and other environment variables
+  ```
+  MONGODB_CONNECTION_URL = mongodb+srv://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.mongodb.net/blog_app
+  PORT = 3000
+  SECRET_KEY = xxxxxxxxxxxxxxxxxxx
+  ```
 4. Run the application: `npm start`
 
 ## API Endpoints
